@@ -1,5 +1,6 @@
 /*
- * Name: Pin Hung Chiang | Date: September 24, 2026
+ * Name: Pin Hung Chiang and Ahamid Adam 
+ | Date: September 24, 2026
  * Program: Metric and imperial unit converter.
  * Input: Users choose a conversion category and direction, then enter one number or a comma/newline-separated list.
  * Processing: The form validates every value and passes numbers to a higher-order conversion function.
