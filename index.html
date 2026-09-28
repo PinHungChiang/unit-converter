@@ -8,61 +8,216 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="app.js" defer></script>
 </head>
+
 <body class="min-h-screen bg-slate-950 font-sans text-slate-100 antialiased">
   <main class="mx-auto max-w-5xl px-4 py-8 sm:px-8 sm:py-14">
+
     <header class="mb-8 sm:mb-12">
-      <p class="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">Everyday tools</p>
-      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Unit converter<span class="text-teal-300">.</span></h1>
-      <p class="mt-3 max-w-xl text-base leading-relaxed text-slate-400">A quick way to convert one value or a whole list.</p>
+      <p class="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-teal-300">
+        Everyday tools
+      </p>
+
+      <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">
+        Unit converter<span class="text-teal-300">.</span>
+      </h1>
+
+      <p class="mt-3 max-w-xl text-base leading-relaxed text-slate-400">
+        A quick way to convert one value or a whole list.
+      </p>
     </header>
 
-    <section aria-label="Unit converter" class="overflow-hidden rounded-3xl border border-slate-700 bg-slate-900 shadow-2xl shadow-black/30">
-      <nav aria-label="Conversion categories" class="flex border-b border-slate-700 px-3 pt-3 sm:px-6 sm:pt-5">
-        <button type="button" id="tab-weight" role="tab" aria-selected="true" aria-controls="converter-panel" data-category="weight" class="category-tab flex-1 border-b-2 border-teal-300 px-2 py-4 text-center text-sm font-semibold text-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300 sm:text-base">Weight</button>
-        <button type="button" id="tab-distance" role="tab" aria-selected="false" aria-controls="converter-panel" data-category="distance" class="category-tab flex-1 border-b-2 border-transparent px-2 py-4 text-center text-sm font-semibold text-slate-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300 sm:text-base">Distance</button>
-        <button type="button" id="tab-temperature" role="tab" aria-selected="false" aria-controls="converter-panel" data-category="temperature" class="category-tab flex-1 border-b-2 border-transparent px-2 py-4 text-center text-sm font-semibold text-slate-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300 sm:text-base">Temperature</button>
+    <section
+      aria-label="Unit converter"
+      class="overflow-hidden rounded-3xl border border-slate-700 bg-slate-900 shadow-2xl shadow-black/30"
+    >
+
+      <nav
+        aria-label="Conversion categories"
+        class="flex border-b border-slate-700 px-3 pt-3 sm:px-6 sm:pt-5"
+      >
+        <button
+          type="button"
+          id="tab-weight"
+          role="tab"
+          aria-selected="true"
+          aria-controls="converter-panel"
+          data-category="weight"
+          class="category-tab flex-1 border-b-2 border-teal-300 px-2 py-4 text-center text-sm font-semibold text-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300 sm:text-base"
+        >
+          Weight
+        </button>
+
+        <button
+          type="button"
+          id="tab-distance"
+          role="tab"
+          aria-selected="false"
+          aria-controls="converter-panel"
+          data-category="distance"
+          class="category-tab flex-1 border-b-2 border-transparent px-2 py-4 text-center text-sm font-semibold text-slate-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300 sm:text-base"
+        >
+          Distance
+        </button>
+
+        <button
+          type="button"
+          id="tab-temperature"
+          role="tab"
+          aria-selected="false"
+          aria-controls="converter-panel"
+          data-category="temperature"
+          class="category-tab flex-1 border-b-2 border-transparent px-2 py-4 text-center text-sm font-semibold text-slate-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-teal-300 sm:text-base"
+        >
+          Temperature
+        </button>
       </nav>
 
-      <div id="converter-panel" role="tabpanel" aria-labelledby="tab-weight" class="p-5 sm:p-9">
+      <div
+        id="converter-panel"
+        role="tabpanel"
+        aria-labelledby="tab-weight"
+        class="p-5 sm:p-9"
+      >
+
         <div class="mb-7">
           <h2 id="category-title" class="text-2xl font-semibold">Weight</h2>
-          <p id="category-description" class="mt-1 text-slate-400">Convert between kilograms and pounds.</p>
+
+          <p id="category-description" class="mt-1 text-slate-400">
+            Convert between kilograms and pounds.
+          </p>
         </div>
 
         <form id="converter-form" novalidate>
+
           <div class="grid gap-3 sm:grid-cols-[1fr_auto_1fr] sm:items-end">
+
             <div>
-              <label for="from-unit" class="mb-2 block text-sm font-medium text-slate-300">From</label>
-              <select id="from-unit" class="w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-3 text-base text-white outline-none focus:border-teal-300 focus:ring-2 focus:ring-teal-300/30"></select>
+              <label
+                for="from-unit"
+                class="mb-2 block text-sm font-medium text-slate-300"
+              >
+                From
+              </label>
+
+              <select
+                id="from-unit"
+                class="w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-3 text-base text-white outline-none focus:border-teal-300 focus:ring-2 focus:ring-teal-300/30"
+              ></select>
             </div>
-            <button type="button" id="swap-units" aria-label="Swap units" title="Swap units" class="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-600 bg-slate-800 text-xl text-teal-200 hover:border-teal-300 hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 sm:mb-0">⇄</button>
+
+            <button
+              type="button"
+              id="swap-units"
+              aria-label="Swap units"
+              title="Swap units"
+              class="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-xl border border-slate-600 bg-slate-800 text-xl text-teal-200 hover:border-teal-300 hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal-300 sm:mb-0"
+            >
+              ⇄
+            </button>
+
             <div>
-              <label for="to-unit" class="mb-2 block text-sm font-medium text-slate-300">To</label>
-              <select id="to-unit" class="w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-3 text-base text-white outline-none focus:border-teal-300 focus:ring-2 focus:ring-teal-300/30"></select>
+              <label
+                for="to-unit"
+                class="mb-2 block text-sm font-medium text-slate-300"
+              >
+                To
+              </label>
+
+              <select
+                id="to-unit"
+                class="w-full rounded-xl border border-slate-600 bg-slate-800 px-4 py-3 text-base text-white outline-none focus:border-teal-300 focus:ring-2 focus:ring-teal-300/30"
+              ></select>
             </div>
+
           </div>
 
           <div class="mt-7">
-            <label for="input-values" class="mb-2 block text-sm font-medium text-slate-300">Values to convert</label>
-            <textarea id="input-values" rows="4" spellcheck="false" placeholder="Enter 10, or a list like 10, 25, 50" aria-describedby="input-help input-error" class="w-full resize-y rounded-xl border border-slate-600 bg-slate-800 px-4 py-3 text-base text-white placeholder:text-slate-500 outline-none focus:border-teal-300 focus:ring-2 focus:ring-teal-300/30"></textarea>
-            <p id="input-help" class="mt-2 text-sm text-slate-400">For multiple values, separate numbers with commas or new lines. Negative numbers and decimals are supported.</p>
-            <p id="input-error" role="alert" class="mt-2 hidden text-sm font-medium text-rose-300"></p>
+
+            <label
+              for="input-values"
+              class="mb-2 block text-sm font-medium text-slate-300"
+            >
+              Values to convert
+            </label>
+
+            <textarea
+              id="input-values"
+              rows="4"
+              spellcheck="false"
+              placeholder="Enter 10, or a list like 10, 25, 50"
+              aria-describedby="input-help input-error"
+              class="w-full resize-y rounded-xl border border-slate-600 bg-slate-800 px-4 py-3 text-base text-white placeholder:text-slate-500 outline-none focus:border-teal-300 focus:ring-2 focus:ring-teal-300/30"
+            ></textarea>
+
+            <p id="input-help" class="mt-2 text-sm text-slate-400">
+              For multiple values, separate numbers with commas or new lines.
+              Negative numbers and decimals are supported.
+            </p>
+
+            <p
+              id="input-error"
+              role="alert"
+              class="mt-2 hidden text-sm font-medium text-rose-300"
+            ></p>
+
           </div>
 
-          <button type="submit" class="mt-7 w-full rounded-xl bg-teal-300 px-6 py-3.5 text-base font-bold text-slate-950 transition hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300 sm:w-auto">Convert values</button>
+          <button
+            type="submit"
+            class="mt-7 w-full rounded-xl bg-teal-300 px-6 py-3.5 text-base font-bold text-slate-950 transition hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300 sm:w-auto"
+          >
+            Convert values
+          </button>
+
         </form>
 
-        <section aria-labelledby="results-title" class="mt-8 border-t border-slate-700 pt-7">
-          <div class="flex items-baseline justify-between gap-3">
-            <h3 id="results-title" class="text-lg font-semibold">Results</h3>
-            <span id="result-count" class="text-sm text-slate-400"></span>
+        <section
+          aria-labelledby="results-title"
+          class="mt-8 border-t border-slate-700 pt-7"
+        >
+
+          <div class="flex items-center justify-between gap-3">
+
+            <h3 id="results-title" class="text-lg font-semibold">
+              Results
+            </h3>
+
+            <div class="flex items-center gap-3">
+
+              <span
+                id="result-count"
+                class="text-sm text-slate-400"
+              ></span>
+
+              <button
+                type="button"
+                id="copy-results"
+                class="hidden rounded-lg border border-slate-600 px-3 py-1.5 text-sm font-medium text-teal-200 transition hover:border-teal-300 hover:bg-slate-800"
+              >
+                Copy Results
+              </button>
+
+            </div>
+
           </div>
-          <div id="results" aria-live="polite" class="mt-4 rounded-xl border border-dashed border-slate-600 bg-slate-950/40 p-5 text-slate-400">Enter a value above to see its conversion.</div>
+
+          <div
+            id="results"
+            aria-live="polite"
+            class="mt-4 rounded-xl border border-dashed border-slate-600 bg-slate-950/40 p-5 text-slate-400"
+          >
+            Enter a value above to see its conversion.
+          </div>
+
         </section>
+
       </div>
     </section>
-    <footer class="mt-8 text-center text-sm text-slate-500">Metric ↔ Imperial · Weight · Distance · Temperature</footer>
+
+    <footer class="mt-8 text-center text-sm text-slate-500">
+      Metric ↔ Imperial · Weight · Distance · Temperature
+    </footer>
+
   </main>
 </body>
 </html>
- 
